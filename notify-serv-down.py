@@ -40,8 +40,10 @@ def main():
     returns : None
     """
     server = "192.168.1.2"
-    ntfy_endpoint = "https://ntfy.sh/RK8K58mfzYO3LhjT"
+    ntfy_endpoint = "https://ntfy.sh/RK8K58mfzYO3LhjT" 
     sleep_for = 60
+
+    ntfy(ntfy_endpoint, f"Info: notify-serv-down activated {datetime.now()}")
 
     while True:
         if (ping_serv(server) != 0):
